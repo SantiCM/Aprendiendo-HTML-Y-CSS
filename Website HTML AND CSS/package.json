@@ -1,0 +1,14 @@
+{
+  "name": "natorus",
+  "version": "1.0.0",
+  "description": "Clon landing natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
+  },
+  "author": "Santi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

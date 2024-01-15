@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // 1 rem
+    font-size: 62.5%; // 1rem = 10px
+
+    @include respond(tab_land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab_port) {
+        font-size: 50%;
+    }
+
+    @include respond (phone) {
+        font-size: 37.5%;
+    }
+
+    @include respond(big_desktop) {
+        font-size: 75%;
+    }
+
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab_port) {
+        padding: 0;
+    }
+
+    @include respond(phone) {
+        padding: 0;
+    }
+}
+

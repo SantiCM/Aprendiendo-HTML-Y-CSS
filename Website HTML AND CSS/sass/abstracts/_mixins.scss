@@ -1,0 +1,30 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;        
+    }
+}
+
+// 1em = 16px
+// MEDIA Query
+// 600 px = 37.5em
+// 900 px = 56.25em
+// 1200 px = 75em
+// 1800 px = 112.5em
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content } 
+    }
+    @if $breakpoint == tab_port {
+        @media (max-width: 56.25em)  { @content }
+    }
+    @if $breakpoint == tab_land {
+        @media (max-width: 75em) { @content }
+    }
+    @if $breakpoint == big_desktop {
+        @media (min-width: 112.5em) { @content }
+    }
+}
+
+
